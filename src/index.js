@@ -3,12 +3,17 @@ import ReactDOM from "react-dom";
 
 import "./styles.css";
 
+const Header = props => (
+  <>
+    <header>My Header</header>
+  </>
+);
+
 const Layout = props => (
   <div>
-    <header>My Header</header>
-    <main>{props.children}</main>
-    <main>{props.children}</main>
-    <main>{props.children}</main>
+    <section>{props.children}</section>
+    <section>{props.children}</section>
+    <section>{props.children}</section>
   </div>
 );
 
@@ -18,9 +23,16 @@ const Layout2 = props => (
   </div>
 );
 
+const Layout3 = props => (
+  <>
+    <section />
+  </>
+);
+
 function App() {
   return (
     <div>
+      <Header />
       <Layout>
         <p>page section is here</p>
       </Layout>
